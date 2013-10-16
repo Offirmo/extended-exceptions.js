@@ -9,6 +9,7 @@
 	],
 	"license": "public domain",
 	"author": "Offirmo <offirmo.net@gmail.com> (http://offirmo.net)",
+	"main": "extended_exceptions.js",
 	"repository": {
 		"type": "git",
 		"url":  "https://github.com/Offirmo/extended-exceptions.js.git"

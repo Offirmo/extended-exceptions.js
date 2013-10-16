@@ -21,7 +21,7 @@ Throwing an exception :
 ```javascript
 define(
 [
-	'extended_exceptions'
+	'extended-exceptions'
 ],
 function(EE) {
 	"use strict";
@@ -34,7 +34,7 @@ Defining our own exceptions inheriting from an existing one :
 ```javascript
 define(
 [
-	'extended_exceptions'
+	'extended-exceptions'
 ],
 function(EE) {
 	"use strict";
