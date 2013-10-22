@@ -18,15 +18,14 @@
 
 		requirejs(
 		[
-			"jquery",
 			"mocha",
 			"domReady!",
 
 			"../spec/extended_exceptions_spec"
 		],
-		function($) {
+		function() {
 			mocha.checkLeaks();
-			mocha.globals(["jQuery"]);
+			//mocha.globals(["jQuery"]);
 
 			console.log("Starting tests...");
 			mocha.run();

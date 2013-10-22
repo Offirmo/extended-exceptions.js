@@ -24,26 +24,20 @@ requirejs.config({
 
 	/////////////////////
 	paths: {
-		// shim plugins
-		"chai"             : "bower_components/chai/chai",
-		"jquery"           : "bower_components/jquery/jquery",
-		"mocha"            : "bower_components/mocha/mocha",
 		// AMD plugins (dirs or direct)
-		"extended-exceptions" : "../extended_exceptions"
+		"extended-exceptions" : "../extended_exceptions",
+		// shim plugins
+		"chai"                : "bower_components/chai/chai",
+		"mocha"               : "bower_components/mocha/mocha"
 	},
 
 
 	/////////////////////
 	shim: {
-		"jquery": {
-			exports: [ "$", "jQuery" ]
-		},
 		"mocha" : {
-			deps: [
-				"jquery"
-			],
+			deps: [ ],
 			exports: "mocha",
-			init: function (jquery) {
+			init: function () {
 				console.log("Hello from mocha shim ! Setting up mocha...");
 				this.mocha.setup("bdd");
 				return this.mocha;

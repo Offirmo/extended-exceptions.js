@@ -5,8 +5,6 @@
 	"private": true,
 	"dependencies": {
 		"amdefine":           "latest",
-		"jquery":             "latest",
-		"requirejs":          "latest",
 		"chai":               "latest",
 		"mocha":              "latest"
 	}
