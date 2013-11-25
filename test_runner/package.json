@@ -4,8 +4,12 @@
 	"version": "1.0.0",
 	"private": true,
 	"dependencies": {
-		"amdefine":           "latest",
-		"chai":               "latest",
-		"mocha":              "latest"
+		"underscore":              "latest",
+		
+		"extended-exceptions":     "latest",
+		
+		"amdefine":                "latest",
+		"chai":                    "latest",
+		"mocha":                   "latest"
 	}
 }
