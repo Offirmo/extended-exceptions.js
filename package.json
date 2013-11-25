@@ -1,28 +1,29 @@
 {
-  "name": "extended-exceptions",
-  "version": "0.9.0",
-  "description": "Easy custom js exceptions for node & browser",
-  "keywords": [
-    "exceptions",
-    "browser",
-    "server"
-  ],
-  "license": "public domain",
-  "author": "Offirmo <offirmo.net@gmail.com> (http://offirmo.net)",
-  "main": "extended_exceptions.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Offirmo/extended-exceptions.js.git"
-  },
-  "dependencies": {},
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "bugs": {
-    "url": "https://github.com/Offirmo/extended-exceptions.js/issues"
-  },
-  "homepage": "https://github.com/Offirmo/extended-exceptions.js",
-  "scripts": {
-    "test": "cd test_runner && npm install && make"
-  }
+	"name": "extended-exceptions",
+	"version": "0.9.0",
+	"description": "Easy custom js exceptions for node & browser",
+	"keywords": [
+		"exceptions",
+		"browser",
+		"server"
+	],
+	"license": "public domain",
+	"author": "Offirmo <offirmo.net@gmail.com> (http://offirmo.net)",
+	"homepage": "https://github.com/Offirmo/extended-exceptions.js",
+	"main": "extended_exceptions.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Offirmo/extended-exceptions.js.git"
+	},
+	"dependencies": {
+	},
+	"engines": {
+		"node": ">=0.10.0"
+	},
+	"bugs": {
+		"url": "https://github.com/Offirmo/extended-exceptions.js/issues"
+	},
+	"scripts": {
+		"test": "cd test_runner && npm install && make"
+	}
 }
