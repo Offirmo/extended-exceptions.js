@@ -2,11 +2,7 @@
 	"name": "extended-exceptions",
 	"version": "0.9.0",
 	"description": "Easy custom js exceptions for node & browser",
-	"keywords": [
-		"exceptions",
-		"browser",
-		"server"
-	],
+	"keywords": "exceptions, browser, server",
 	"license": "public domain",
 	"author": "Offirmo <offirmo.net@gmail.com> (http://offirmo.net)",
 	"homepage": "https://github.com/Offirmo/extended-exceptions.js",
