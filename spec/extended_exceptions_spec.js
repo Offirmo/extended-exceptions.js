@@ -117,6 +117,12 @@ function(chai, EE) {
 			});
 		}); // describe feature
 
+		describe('InvariantNotMetError', function() {
+			it('should work', function() {
+				test_extended_error(EE.InvariantNotMetError, "InvariantNotMetError", EE.RuntimeError );
+			});
+		}); // describe feature
+
 		describe('custom errors creation', function() {
 			it('should allow easy creation of a custom error which works', function() {
 				var CustomError = EE.create_custom_error("CustomError", EE.RuntimeError);
