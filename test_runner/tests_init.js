@@ -1,4 +1,3 @@
 "use strict";
 
-//console.log("hello from tests init !");
-
+// this files does nothing and just serve as an entry point for node unit tests

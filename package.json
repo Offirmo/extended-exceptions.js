@@ -1,6 +1,6 @@
 {
 	"name": "extended-exceptions",
-	"version": "0.9.0",
+	"version": "0.9.1-beta",
 	"description": "Easy custom js exceptions for node & browser, AMD.",
 	"keywords": "exceptions, browser, server",
 	"license": "public domain",
@@ -20,6 +20,6 @@
 		"url": "https://github.com/Offirmo/extended-exceptions.js/issues"
 	},
 	"scripts": {
-		"test": "cd test_runner && npm install && make"
+		"test": "npm install && cd test_runner && make"
 	}
 }
