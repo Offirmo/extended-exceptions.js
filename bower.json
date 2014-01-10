@@ -10,5 +10,7 @@
 	"license": "public domain",
 	"authors": [ "Offirmo <offirmo.net@gmail.com>" ],
 	"homepage": "https://github.com/Offirmo/extended-exceptions.js",
-	"main": "extended_exceptions.js"
+	"main": "extended_exceptions.js",
+	"dependencies": {
+	}
 }
