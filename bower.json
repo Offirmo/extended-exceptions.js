@@ -1,6 +1,6 @@
 {
 	"name": "extended-exceptions.js",
-	"version": "0.9.1-beta",
+	"version": "0.9.1",
 	"description": "Easy custom js exceptions for node & browser, AMD.",
 	"keywords": [
 		"exceptions",

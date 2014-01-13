@@ -1,7 +1,11 @@
 extended-exceptions.js
 ======================
 
-[![Bower version](https://badge.fury.io/bo/extended-exceptions.js.png)](http://badge.fury.io/bo/extended-exceptions.js) [![NPM version](https://badge.fury.io/js/extended-exceptions.png)](http://badge.fury.io/js/extended-exceptions) [![Build Status](https://travis-ci.org/Offirmo/extended-exceptions.js.png?branch=master)](https://travis-ci.org/Offirmo/extended-exceptions.js) [![status](https://sourcegraph.com/api/repos/github.com/Offirmo/extended-exceptions.js/badges/status.png)](https://sourcegraph.com/github.com/Offirmo/extended-exceptions.js) [![Total views](https://sourcegraph.com/api/repos/github.com/Offirmo/extended-exceptions.js/counters/views.png)](https://sourcegraph.com/github.com/Offirmo/extended-exceptions.js)
+[![Build Status](https://travis-ci.org/Offirmo/extended-exceptions.js.png?branch=master)](https://travis-ci.org/Offirmo/extended-exceptions.js)
+[![NPM version](https://badge.fury.io/js/extended-exceptions.png)](http://badge.fury.io/js/extended-exceptions)
+[![Bower version](https://badge.fury.io/bo/extended-exceptions.js.png)](http://badge.fury.io/bo/extended-exceptions.js)
+[![status](https://sourcegraph.com/api/repos/github.com/Offirmo/extended-exceptions.js/badges/status.png)](https://sourcegraph.com/github.com/Offirmo/extended-exceptions.js)
+[![Total views](https://sourcegraph.com/api/repos/github.com/Offirmo/extended-exceptions.js/counters/views.png)](https://sourcegraph.com/github.com/Offirmo/extended-exceptions.js)
 
 Introduction
 ------------

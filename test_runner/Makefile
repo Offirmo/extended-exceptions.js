@@ -9,10 +9,10 @@ test: module_under_test_copied
 module_under_test_copied: deps_installed
 	rm -rf node_modules/extended-exceptions
 	mkdir  node_modules/extended-exceptions
-	cp -r ../*.js         node_modules/extended-exceptions
-	cp -r ../package.json node_modules/extended-exceptions
-	cp -r ../README.md node_modules/extended-exceptions
-	cp -r ../spec         node_modules/extended-exceptions
+	cp -Lr ../*.js         node_modules/extended-exceptions
+	cp -Lr ../package.json node_modules/extended-exceptions
+	cp -Lr ../README.md    node_modules/extended-exceptions
+	cp -Lr ../spec         node_modules/extended-exceptions
 
 deps_installed:
 	npm install
