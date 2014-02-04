@@ -145,7 +145,7 @@ function(chai, EE) {
 
 			describe('InvariantNotMet', function() {
 				it('should work', function() {
-					test_extended_error(EE.InvariantNotMet, "InvariantNotMet", EE.RuntimeError );
+					test_extended_error(EE.InvariantNotMet, "InvariantNotMet", EE.LogicError );
 				});
 			}); // describe feature
 		}); // describe feature

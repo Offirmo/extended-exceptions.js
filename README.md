@@ -51,11 +51,11 @@ Error (standard)  <-- javascript root exception
     + InvalidArgument
     + LengthError
     + OutOfRange
+    + InvariantNotMet
   + RuntimeError
     + NotImplemented
     + UnknownEnumValue
     + IllegalState
-    + InvariantNotMet
 ```
 
 
