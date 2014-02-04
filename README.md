@@ -4,7 +4,7 @@ extended-exceptions.js
 [![Build Status](https://travis-ci.org/Offirmo/extended-exceptions.js.png?branch=master)](https://travis-ci.org/Offirmo/extended-exceptions.js)
 [![NPM version](https://badge.fury.io/js/extended-exceptions.png)](http://badge.fury.io/js/extended-exceptions)
 [![Bower version](https://badge.fury.io/bo/extended-exceptions.js.png)](http://badge.fury.io/bo/extended-exceptions.js)
-[![Project status](http://img.shields.io/badge/project_status-highly_experimental-red.png)](http://offirmo.net/classifying-open-source-projects-status/)
+[![Project status](http://img.shields.io/badge/project_status-stable_and_active-brightgreen.png)](http://offirmo.net/classifying-open-source-projects-status/)
 [![license](http://img.shields.io/badge/license-public_domain-brightgreen.png)](http://unlicense.org/)
 [![graph status](https://sourcegraph.com/api/repos/github.com/Offirmo/extended-exceptions.js/badges/status.png)]
 (https://sourcegraph.com/github.com/Offirmo/extended-exceptions.js)
@@ -29,9 +29,6 @@ Includes special workarounds for Firefox "Error" object which has sometimes a st
 License : public domain (http://unlicense.org/)
 
 Interesting read : http://dailyjs.com/2014/01/30/exception-error/
-
-
-```
 
 
 Predefined exceptions
@@ -136,6 +133,7 @@ function(chai, CUT, EE) {
 		}); // describe feature
 	}); // describe CUT
 }); // requirejs module
+```
 
 Installation
 ------------
