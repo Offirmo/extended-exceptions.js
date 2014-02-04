@@ -28,25 +28,35 @@ Includes special workarounds for Firefox "Error" object which has sometimes a st
 
 License : public domain (http://unlicense.org/)
 
-Interesting read : http://dailyjs.com/2014/01/30/exception-error/
+Interesting reads :
+- http://dailyjs.com/2014/01/30/exception-error/
+- http://en.cppreference.com/w/cpp/error/exception
 
 
-Predefined exceptions
----------------------
+Predefined errors
+-----------------
 
 Note : we keep the "error" naming scheme of standard javascript.
 
- * Error (standard)
- *  ExtendedError
- *   LogicError
- *    InvalidArgument
- *    LengthError
- *    OutOfRange
- *   RuntimeError
- *    NotImplementedError
- *    UnknownEnumValueError
- *    IllegalStateError
- *    InvariantNotMetError
+```
+Error (standard) <-- Vanilla javascript exceptions
+ EvalError       <--
+ RangeError      <--
+ ReferenceError  <--
+ SyntaxError     <--
+ TypeError       <--
+ URIError        <--
+ ExtendedError   <-- Here start our custom exceptions
+  LogicError         <-- "errors that are a consequence of faulty logic within the program such as violating logical
+  preconditions or class invariants and may be preventable"
+   InvalidArgument
+   LengthError
+   OutOfRange
+  RuntimeError
+   NotImplementedError
+   UnknownEnumValueError
+   IllegalStateError
+   InvariantNotMetError
 
 
 Usage
@@ -128,7 +138,7 @@ function(chai, CUT, EE) {
 				var out = CUT.make_new();
 
 				var tempfn = function() { out.dostuff(); };
-            tempfn.should.throw(EE.IllegalStateError, "Not initialized !"); // works fine
+				tempfn.should.throw(EE.IllegalStateError, "Not initialized !"); // works fine
 			});
 		}); // describe feature
 	}); // describe CUT
