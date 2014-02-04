@@ -50,8 +50,8 @@ function(chai, EE) {
 			});
 
 			it('should work along chai expectations', function() {
-				var tempfn = function() {throw new EE.IllegalStateError("Not started !"); };
-				tempfn.should.throw(EE.IllegalStateError, "Not started !");
+				var tempfn = function() {throw new EE.IllegalState("Not started !"); };
+				tempfn.should.throw(EE.IllegalState, "Not started !");
 			});
 
 		});
@@ -125,27 +125,27 @@ function(chai, EE) {
 				});
 			}); // describe feature
 
-			describe('NotImplementedError', function() {
+			describe('NotImplemented', function() {
 				it('should work', function() {
-					test_extended_error(EE.NotImplementedError, "NotImplementedError", EE.RuntimeError );
+					test_extended_error(EE.NotImplemented, "NotImplemented", EE.RuntimeError );
 				});
 			}); // describe feature
 
-			describe('UnknownEnumValueError', function() {
+			describe('UnknownEnumValue', function() {
 				it('should work', function() {
-					test_extended_error(EE.UnknownEnumValueError, "UnknownEnumValueError", EE.RuntimeError );
+					test_extended_error(EE.UnknownEnumValue, "UnknownEnumValue", EE.RuntimeError );
 				});
 			}); // describe feature
 
-			describe('IllegalStateError', function() {
+			describe('IllegalState', function() {
 				it('should work', function() {
-					test_extended_error(EE.IllegalStateError, "IllegalStateError", EE.RuntimeError );
+					test_extended_error(EE.IllegalState, "IllegalState", EE.RuntimeError );
 				});
 			}); // describe feature
 
-			describe('InvariantNotMetError', function() {
+			describe('InvariantNotMet', function() {
 				it('should work', function() {
-					test_extended_error(EE.InvariantNotMetError, "InvariantNotMetError", EE.RuntimeError );
+					test_extended_error(EE.InvariantNotMet, "InvariantNotMet", EE.RuntimeError );
 				});
 			}); // describe feature
 		}); // describe feature

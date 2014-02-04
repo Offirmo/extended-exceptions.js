@@ -39,23 +39,23 @@ Predefined errors
 Note : we keep the "error" naming scheme of standard javascript.
 
 ```
-Error (standard) <-- Vanilla javascript exceptions
- EvalError       <--
- RangeError      <--
- ReferenceError  <--
- SyntaxError     <--
- TypeError       <--
- URIError        <--
- ExtendedError   <-- Here start our custom exceptions
-  LogicError
-   InvalidArgument
-   LengthError
-   OutOfRange
-  RuntimeError
-   NotImplementedError
-   UnknownEnumValueError
-   IllegalStateError
-   InvariantNotMetError
+Error (standard)  <-- javascript root exception
++ EvalError       <-- Vanilla javascript exceptions
++ RangeError      <-- ...
++ ReferenceError  <-- ...
++ SyntaxError     <-- ...
++ TypeError       <-- ...
++ URIError        <-- ...
++ ExtendedError   <-- Here start our custom exceptions
+  + LogicError
+    + InvalidArgument
+    + LengthError
+    + OutOfRange
+  + RuntimeError
+    + NotImplemented
+    + UnknownEnumValue
+    + IllegalState
+    + InvariantNotMet
 ```
 
 
@@ -73,7 +73,7 @@ function(EE) {
 	"use strict";
 
 	// Feature 1 - use one of the predefined errors
-	throw new EE.NotImplementedError("TODO !");
+	throw new EE.NotImplemented("TODO !");
 	throw new EE.InvalidArgument("Please !");
 ```
 

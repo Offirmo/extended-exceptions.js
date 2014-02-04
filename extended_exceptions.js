@@ -10,10 +10,10 @@
  *    LengthError
  *    OutOfRange
  *   RuntimeError
- *    NotImplementedError
- *    UnknownEnumValueError
- *    IllegalStateError
- *    InvariantNotMetError
+ *    NotImplemented
+ *    UnknownEnumValue
+ *    IllegalState
+ *    InvariantNotMet
  */
 
 // if node.js : use amdefine (add it with npm)
@@ -120,17 +120,17 @@ define(function() {
 
 	// a second batch with other commonly needed errors
 	// when we encounter code not implemented
-	extended_exceptions.NotImplementedError = create_custom_error("NotImplementedError", extended_exceptions.RuntimeError);
+	extended_exceptions.NotImplemented = create_custom_error("NotImplemented", extended_exceptions.RuntimeError);
 	// when we switch case on an enumerated var and don't recognize a value (usually a newly added one)
-	extended_exceptions.UnknownEnumValueError = create_custom_error("UnknownEnumValueError", extended_exceptions.RuntimeError);
+	extended_exceptions.UnknownEnumValue = create_custom_error("UnknownEnumValue", extended_exceptions.RuntimeError);
 	// Signals that a method has been invoked at an illegal or inappropriate time.
 	// In other words, the application is not in an appropriate state for the
 	// requested operation.
-	extended_exceptions.IllegalStateError = create_custom_error("IllegalStateError", extended_exceptions.RuntimeError);
+	extended_exceptions.IllegalState = create_custom_error("IllegalState", extended_exceptions.RuntimeError);
 	// Signals that an invariant (= stuff the should always be true) is not met
 	// This should, of course, never happen...
 	// https://en.wikipedia.org/wiki/Invariant_%28computer_science%29
-	extended_exceptions.InvariantNotMetError = create_custom_error("InvariantNotMetError", extended_exceptions.RuntimeError);
+	extended_exceptions.InvariantNotMet = create_custom_error("InvariantNotMet", extended_exceptions.RuntimeError);
 
 
 	return extended_exceptions;
