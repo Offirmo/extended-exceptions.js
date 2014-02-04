@@ -14,7 +14,7 @@ function(chai, EE) {
 
 	describe('Extended exceptions', function() {
 
-		describe('ExtendedError (base custom error)', function() {
+		describe('ExtendedError (base)', function() {
 
 			/*it('test', function() {
 				var out = new Error("Test error");
@@ -37,6 +37,21 @@ function(chai, EE) {
 				out.name.should.equals("ExtendedError");
 				out.message.should.equals("Test error");
 				out.stack.should.not.be.empty;
+			});
+
+			it('should allow wrapping/retyping of an existing Error', function() {
+				var base_err = new Error("Test error");
+				var out = new EE.ExtendedError(base_err);
+
+				out.name.should.equals("ExtendedError");
+				out.message.should.equals("Test error");
+				out.stack.should.not.be.empty;
+				expect( out.stack ).to.equals(base_err.stack);
+			});
+
+			it('should work along chai expectations', function() {
+				var tempfn = function() {throw new EE.IllegalStateError("Not started !"); };
+				tempfn.should.throw(EE.IllegalStateError, "Not started !");
 			});
 
 		});
@@ -62,73 +77,77 @@ function(chai, EE) {
 				e.message.should.equals("test_extended_error 2");
 			}
 
-			// and the chai assertion should work (sadly, it doesn't always in FF)
+			// and the chai assertion should work (even in FF ;)
 			var tempfn = function() {
 				throw new CustomErrorClass("test_extended_error 3");
 			}
 			tempfn.should.throw(CustomErrorClass, "test_extended_error 3");
 		};
 
-		describe('LogicError', function() {
-			it('should work', function() {
-				test_extended_error(EE.LogicError, "LogicError", EE.ExtendedError );
-			});
-		}); // describe feature
 
-		describe('InvalidArgument', function() {
-			it('should work', function() {
-				test_extended_error(EE.InvalidArgument, "InvalidArgument", EE.LogicError );
-			});
-		}); // describe feature
-
-		describe('LengthError', function() {
-			it('should work', function() {
-				test_extended_error(EE.LengthError, "LengthError", EE.LogicError );
-			});
-		}); // describe feature
-
-		describe('OutOfRange', function() {
-			it('should work', function() {
-				test_extended_error(EE.OutOfRange, "OutOfRange", EE.LogicError );
-			});
-		}); // describe feature
-
-		describe('RuntimeError', function() {
-			it('should work', function() {
-				test_extended_error(EE.RuntimeError, "RuntimeError", EE.ExtendedError );
-			});
-		}); // describe feature
-
-		describe('NotImplementedError', function() {
-			it('should work', function() {
-				test_extended_error(EE.NotImplementedError, "NotImplementedError", EE.RuntimeError );
-			});
-		}); // describe feature
-
-		describe('UnknownEnumValueError', function() {
-			it('should work', function() {
-				test_extended_error(EE.UnknownEnumValueError, "UnknownEnumValueError", EE.RuntimeError );
-			});
-		}); // describe feature
-
-		describe('IllegalStateError', function() {
-			it('should work', function() {
-				test_extended_error(EE.IllegalStateError, "IllegalStateError", EE.RuntimeError );
-			});
-		}); // describe feature
-
-		describe('InvariantNotMetError', function() {
-			it('should work', function() {
-				test_extended_error(EE.InvariantNotMetError, "InvariantNotMetError", EE.RuntimeError );
-			});
-		}); // describe feature
-
-		describe('custom errors creation', function() {
+		describe('Custom errors creation', function() {
 			it('should allow easy creation of a custom error which works', function() {
 				var CustomError = EE.create_custom_error("CustomError", EE.RuntimeError);
 
 				test_extended_error(CustomError, "CustomError", EE.RuntimeError );
 			});
+		}); // describe feature
+
+
+		describe('predefined error', function() {
+			describe('LogicError', function() {
+				it('should work', function() {
+					test_extended_error(EE.LogicError, "LogicError", EE.ExtendedError );
+				});
+			}); // describe feature
+
+			describe('InvalidArgument', function() {
+				it('should work', function() {
+					test_extended_error(EE.InvalidArgument, "InvalidArgument", EE.LogicError );
+				});
+			}); // describe feature
+
+			describe('LengthError', function() {
+				it('should work', function() {
+					test_extended_error(EE.LengthError, "LengthError", EE.LogicError );
+				});
+			}); // describe feature
+
+			describe('OutOfRange', function() {
+				it('should work', function() {
+					test_extended_error(EE.OutOfRange, "OutOfRange", EE.LogicError );
+				});
+			}); // describe feature
+
+			describe('RuntimeError', function() {
+				it('should work', function() {
+					test_extended_error(EE.RuntimeError, "RuntimeError", EE.ExtendedError );
+				});
+			}); // describe feature
+
+			describe('NotImplementedError', function() {
+				it('should work', function() {
+					test_extended_error(EE.NotImplementedError, "NotImplementedError", EE.RuntimeError );
+				});
+			}); // describe feature
+
+			describe('UnknownEnumValueError', function() {
+				it('should work', function() {
+					test_extended_error(EE.UnknownEnumValueError, "UnknownEnumValueError", EE.RuntimeError );
+				});
+			}); // describe feature
+
+			describe('IllegalStateError', function() {
+				it('should work', function() {
+					test_extended_error(EE.IllegalStateError, "IllegalStateError", EE.RuntimeError );
+				});
+			}); // describe feature
+
+			describe('InvariantNotMetError', function() {
+				it('should work', function() {
+					test_extended_error(EE.InvariantNotMetError, "InvariantNotMetError", EE.RuntimeError );
+				});
+			}); // describe feature
 		}); // describe feature
 	});
 });

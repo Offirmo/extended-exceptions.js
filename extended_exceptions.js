@@ -38,29 +38,33 @@ define(function() {
 
 	// a base, for other exceptions to derive
 	// contrary to Error, this error will be correctly derivable
-	function ExtendedError(message) {
+	function ExtendedError(message_or_error) {
 		// Note : This is ONE way to derive from error.
 		// I find it convenient but I don't pretend it's the best
-		//console.log("ExtendedError constructor...");
 
-		if(typeof message === 'undefined')
-			message = ""; //<default message>";
+		var err, message;
 
-		// we must create an error to have an up-to-date stacktrace
-		var err = new Error(message);
+		if(message_or_error instanceof Error) {
+			// we are wrapping an existing error
+			err = message_or_error;
+			message = err.message;
+		}
+		else {
+			// we must create an error to have an up-to-date stacktrace
+			message = message_or_error;
+			err = new Error(message);
+		}
 
-		// import everything neded into 'this' object
-		// so it has the same prototype as an Error object
-		// we must copy manually due to Error specificity
+		// Import everything neded into 'this' object
+		// so it has the same prototype as an Error object.
+		// We must copy manually due to Error object specificity.
 		this.message = message; // assign directly from param. If we assign from err.message, FF sometimes fails to copy for unknown reasons
 		this.stack = err.stack;
 
 		// fix stuff
 		this.name = "ExtendedError";
-
-		//console.log("ExtendedError constructor done, message = " + this.message);
 	}
-	ExtendedError.prototype = Object.create(error_instance.prototype); // no, we can't directly access Error.prototype
+	ExtendedError.prototype = Object.create(error_instance.prototype); // since we can't directly access Error.prototype
 	ExtendedError.prototype.constructor = ExtendedError;
 
 
