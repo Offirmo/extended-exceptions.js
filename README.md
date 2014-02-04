@@ -47,8 +47,7 @@ Error (standard) <-- Vanilla javascript exceptions
  TypeError       <--
  URIError        <--
  ExtendedError   <-- Here start our custom exceptions
-  LogicError         <-- "errors that are a consequence of faulty logic within the program such as violating logical
-  preconditions or class invariants and may be preventable"
+  LogicError
    InvalidArgument
    LengthError
    OutOfRange
@@ -57,6 +56,7 @@ Error (standard) <-- Vanilla javascript exceptions
    UnknownEnumValueError
    IllegalStateError
    InvariantNotMetError
+```
 
 
 Usage
