@@ -9,11 +9,11 @@
  *    InvalidArgument
  *    LengthError
  *    OutOfRange
+ *    InvariantNotMet
  *   RuntimeError
  *    NotImplemented
  *    UnknownEnumValue
  *    IllegalState
- *    InvariantNotMet
  */
 
 // if node.js : use amdefine (add it with npm)
@@ -71,7 +71,9 @@ define(function() {
 	// now that we have a base error which is derivable
 	// wrap classical inheritance in this utility func to avoid code duplication
 	function create_custom_error(name, ParentErrorClass) {
-		if (typeof ParentErrorClass === 'undefined') ParentErrorClass = ExtendedError;
+		if (typeof ParentErrorClass === 'undefined') {
+			ParentErrorClass = ExtendedError;
+		}
 
 		function CustomExtendedErrorClass() {
 			//console.log("CustomExtendedErrorClass[" + name + "] constructor with args... ");

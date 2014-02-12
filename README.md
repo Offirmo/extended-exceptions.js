@@ -4,10 +4,10 @@ extended-exceptions.js
 [![Build Status](https://travis-ci.org/Offirmo/extended-exceptions.js.png?branch=master)](https://travis-ci.org/Offirmo/extended-exceptions.js)
 [![NPM version](https://badge.fury.io/js/extended-exceptions.png)](http://badge.fury.io/js/extended-exceptions)
 [![Bower version](https://badge.fury.io/bo/extended-exceptions.js.png)](http://badge.fury.io/bo/extended-exceptions.js)
+[![Dependency Status](https://gemnasium.com/Offirmo/extended-exceptions.js.png)](https://gemnasium.com/Offirmo/extended-exceptions.js)
 [![Project status](http://img.shields.io/badge/project_status-stable_and_active-brightgreen.png)](http://offirmo.net/classifying-open-source-projects-status/)
 [![license](http://img.shields.io/badge/license-public_domain-brightgreen.png)](http://unlicense.org/)
-[![graph status](https://sourcegraph.com/api/repos/github.com/Offirmo/extended-exceptions.js/badges/status.png)]
-(https://sourcegraph.com/github.com/Offirmo/extended-exceptions.js)
+[![graph status](https://sourcegraph.com/api/repos/github.com/Offirmo/extended-exceptions.js/badges/status.png)](https://sourcegraph.com/github.com/Offirmo/extended-exceptions.js)
 [![Code Climate](https://codeclimate.com/github/Offirmo/extended-exceptions.js.png)](https://codeclimate.com/github/Offirmo/extended-exceptions.js)
 [![Total views](https://sourcegraph.com/api/repos/github.com/Offirmo/extended-exceptions.js/counters/views.png)](https://sourcegraph.com/github.com/Offirmo/extended-exceptions.js)
 [![Gittip](http://img.shields.io/gittip/Offirmo.png)](https://www.gittip.com/Offirmo/)
