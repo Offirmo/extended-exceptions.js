@@ -32,6 +32,29 @@ function(chai, EE) {
 				expect(out.stack).not.to.be.empty;
 			});
 
+			// some 3rd party libs expect that
+			// see also GitHub issue #1
+			describe('message property systematic generation', function() {
+
+				it('should be done when none given', function() {
+					var out = new EE.ExtendedError(/* no param */);
+					expect(out.message).to.equals(''); // empty but not undefined
+				});
+
+				it('should be done when wrapping another error with none given', function() {
+					var base_err = new Error();
+					var out = new EE.ExtendedError(base_err);
+					expect(out.message).to.equals(''); // empty but not undefined
+				});
+
+				it('should be done when given a non-string object', function() {
+					var out = new EE.ExtendedError({foo: 'bar'});
+					expect(out.message).to.be.a('string');
+					expect(out.message).not.to.be.empty; // stringification may vary amongst interpreters
+				});
+
+			});
+
 			it('should allow wrapping/retyping of an existing Error', function() {
 				var base_err = new Error('Test error');
 				var out = new EE.ExtendedError(base_err);

@@ -51,7 +51,8 @@ define(function() {
 		}
 		else {
 			// we must create an error to have an up-to-date stacktrace
-			message = message_or_error;
+			// we must handle cases where given message is not a string
+			message = '' + (message_or_error || '');
 			err = new Error(message);
 		}
 
