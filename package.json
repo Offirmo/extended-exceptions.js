@@ -12,7 +12,7 @@
     "url": "https://github.com/Offirmo/extended-exceptions.js.git"
   },
   "dependencies": {
-    "amdefine": "~0.1"
+    "amdefine": "^0.1"
   },
   "engines": {
     "node": ">=0.10.0"
